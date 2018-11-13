@@ -1,0 +1,251 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<script>
+letters = {
+    /*'अ':  ['a', 'America', 'https://upload.wikimedia.org/wikipedia/commons/9/91/MRv01-a.ogg'],
+    'आ':  ['ā', 'father', 'https://upload.wikimedia.org/wikipedia/commons/0/03/MRv02-aa.ogg'],
+    'इ':  ['i', 'tin', 'https://upload.wikimedia.org/wikipedia/commons/a/af/MRv03-i.ogg'],
+    'ई':  ['ī', 'see', 'https://upload.wikimedia.org/wikipedia/commons/1/17/MRv04-ee.ogg'],
+    'उ':  ['u', 'book', 'https://upload.wikimedia.org/wikipedia/commons/b/b9/MRv05-u.ogg'],
+    'ऊ':  ['ū', 'tool', 'https://upload.wikimedia.org/wikipedia/commons/4/49/MRv06-oo.ogg'],
+    'ऋ':  ['rū', 'ruby', 'https://upload.wikimedia.org/wikipedia/commons/b/b1/MRv13-ru.ogg'],
+    'ए':  ['e', 'Emma', 'https://upload.wikimedia.org/wikipedia/commons/7/74/MRv07-e.ogg'],
+    'ऐ':  ['ai', 'Aishwarya', 'https://upload.wikimedia.org/wikipedia/commons/8/8c/MRv08-aii.ogg'],
+    'ओ':  ['o', 'hole', 'https://upload.wikimedia.org/wikipedia/commons/9/9d/MRv09-o.ogg'],
+    'औ':  ['au', 'owl', 'https://upload.wikimedia.org/wikipedia/commons/7/77/MRv10-ouu.ogg'],
+    'अं': ['am', 'um', 'https://upload.wikimedia.org/wikipedia/commons/a/a7/MRv11-um.ogg'],
+    'अः': ['ah', 'aha', 'https://upload.wikimedia.org/wikipedia/commons/4/43/MRv12-aha.ogg'],
+    'अॅ': ['ae', 'cat', ''],
+    'ऑ':  ['ao', 'ball', ''],
+
+    'क': ['ka', 'kazoo', 'https://upload.wikimedia.org/wikipedia/commons/e/e3/MR01-ka.ogg'],
+    'ख': ['kh', 'khan', 'https://upload.wikimedia.org/wikipedia/commons/4/4d/MR02-kha.ogg'],
+    'ग': ['ga', 'gun', 'https://upload.wikimedia.org/wikipedia/commons/9/97/MR03-ga.ogg'],
+    'घ': ['gh', 'ghar (house)', 'https://upload.wikimedia.org/wikipedia/commons/b/b3/MR04-gha.ogg'],
+    'ङ': ['ng', 'hing (asfoetida)', 'https://upload.wikimedia.org/wikipedia/commons/4/45/MR05-nga.ogg'],*/
+
+    'च': ['ch', 'each', 'https://upload.wikimedia.org/wikipedia/commons/f/f1/MR06-cha.ogg'],
+    'छ': ['chh', 'chhota (small)', 'https://upload.wikimedia.org/wikipedia/commons/0/00/MR07-chha.ogg'],
+    'ज': ['ja', 'Jamaica', 'https://upload.wikimedia.org/wikipedia/commons/3/3d/MR08-ja.ogg'],
+    'झ': ['za', 'zhaala (happened)', 'https://upload.wikimedia.org/wikipedia/commons/e/e0/MR09-jha.ogg'],
+    'ञ': ['nya', '', 'https://upload.wikimedia.org/wikipedia/commons/b/ba/MR10-nya.ogg'],
+/*
+    'ट': ['tu', 'turmeric', 'https://upload.wikimedia.org/wikipedia/commons/4/45/MR11-Ta.ogg'],
+    'ठ': ['th', 'Kathmandu', 'https://upload.wikimedia.org/wikipedia/commons/0/0a/MR12-Tha.ogg'],
+    'ड': ['du', 'dumb', 'https://upload.wikimedia.org/wikipedia/commons/c/c3/MR13-Da.ogg'],
+		'ढ': ['dh', 'medha', 'https://upload.wikimedia.org/wikipedia/commons/1/17/MR14-Dha.ogg'],
+		'ण': ['n', '', 'https://upload.wikimedia.org/wikipedia/commons/c/c3/MR15-Na.ogg'],
+
+		'त': ['ta', 'tanishia', 'https://upload.wikimedia.org/wikipedia/commons/1/19/MR16-ta.ogg'],
+		'थ': ['th', 'thunder', 'https://upload.wikimedia.org/wikipedia/commons/f/f1/MR17-tha.ogg'],
+		'द': ['the', 'the', 'https://upload.wikimedia.org/wikipedia/commons/1/18/MR18-da.ogg'],
+		'ध': ['dh', '', 'https://upload.wikimedia.org/wikipedia/commons/b/b0/MR19-dha.ogg'],
+		'न': ['na', 'nuh-uh', 'https://upload.wikimedia.org/wikipedia/commons/a/aa/MR20-na.ogg'],
+
+		'प': ['pa', 'pun', 'https://upload.wikimedia.org/wikipedia/commons/b/b3/MR21-pa.ogg'],
+		'फ': ['pha', 'fund', 'https://upload.wikimedia.org/wikipedia/commons/d/d2/MR22-pha.ogg'],
+		'ब': ['ba', 'button', 'https://upload.wikimedia.org/wikipedia/commons/d/d3/MR23-ba.ogg'],
+		'भ': ['bh', 'bhaath (rice)', 'https://upload.wikimedia.org/wikipedia/commons/b/bb/MR24-bha.ogg'],
+		'म': ['ma', 'monday', 'https://upload.wikimedia.org/wikipedia/commons/e/ef/MR25-ma.ogg'],
+
+		'य': ['ya', 'yuck', 'https://upload.wikimedia.org/wikipedia/commons/8/89/MR26-ya.ogg'],
+		'र': ['ra', 'Ratan Tata', 'https://upload.wikimedia.org/wikipedia/commons/c/cd/MR27-ra.ogg'],
+		'ल': ['la', 'love', 'https://upload.wikimedia.org/wikipedia/commons/c/c2/MR28-la.ogg'],
+		'व': ['wa', 'wuw', 'https://upload.wikimedia.org/wikipedia/commons/6/68/MR29-wa.ogg'],
+		'श': ['sha', 'shun', 'https://upload.wikimedia.org/wikipedia/commons/0/01/MR30-sha.ogg'],
+
+		'ष': ['sha', '', 'https://upload.wikimedia.org/wikipedia/commons/b/b2/MR31-sha2.ogg'],
+		'स': ['sa', 'sunday', 'https://upload.wikimedia.org/wikipedia/commons/2/25/MR32-sa.ogg'],
+		'ह': ['ha', 'hug', 'https://upload.wikimedia.org/wikipedia/commons/4/47/MR33-ha.ogg'],
+		'ळ': ['la', 'marathi-only L', 'https://upload.wikimedia.org/wikipedia/commons/d/d2/MR34-La.ogg'],
+		'क्ष': ['ksha', 'akshay', 'https://upload.wikimedia.org/wikipedia/commons/9/9f/MR35-ksha.ogg'],
+		'ज्ञ': ['dnya', '', 'https://upload.wikimedia.org/wikipedia/commons/6/64/MR36-dnya.ogg'],*/
+};
+
+
+state = {};
+
+function dumpAlphabet() {
+	for (let [key, value] of Object.entries(letters)) {
+		document.getElementById("previous").innerHTML = document.getElementById("previous").innerHTML + '<div>' + key + ' : ' + value + '</div>';
+	}
+}
+
+function init() {
+	state.correct = 0;
+	state.answered = 0;
+
+	state.question = "UNSET";
+	state.a = "aUNSET";
+	state.b = "bUNSET";
+	state.c = "cUNSET";
+	state.d = "dUNSET";
+	state.answer = "UNSET";
+	state.sound = "";
+
+	nextQuestion();
+
+	refreshAll();
+}
+
+var randomKey = function (obj) {
+    var keys = Object.keys(obj)
+    return keys[ keys.length * Math.random() << 0];
+};
+
+function nextQuestion() {
+	var nextans = randomKey(letters);
+	var opt1 = randomKey(letters);
+	while (opt1 == nextans) {
+		opt1 = randomKey(letters);
+	}
+
+	var opt2 = randomKey(letters);
+	while (opt2 == opt1 || opt2 == nextans) {
+		opt2 = randomKey(letters);
+	}
+
+	var opt3 = randomKey(letters);
+	while (opt3 == opt2 || opt3 == opt1 || opt3 == nextans) {
+		opt3 = randomKey(letters);
+	}
+
+	state.question = nextans;
+	state.sound = letters[nextans][2];
+	state.pretty_answer = nextans + " = " + letters[nextans]
+	answer_position = 4 * Math.random() << 0;
+
+	switch (answer_position) {
+		case 0:
+			state.a = letters[nextans];
+			state.b = letters[opt1];
+			state.c = letters[opt2];
+			state.d = letters[opt3];
+			state.answer = "a";
+			break;
+		case 1:
+			state.a = letters[opt1];
+			state.b = letters[nextans];
+			state.c = letters[opt2];
+			state.d = letters[opt3];
+			state.answer = "b";
+			break;
+		case 2:
+			state.a = letters[opt2];
+			state.b = letters[opt1];
+			state.c = letters[nextans];
+			state.d = letters[opt3];
+			state.answer = "c";
+			break;
+		case 3:
+			state.a = letters[opt3];
+			state.b = letters[opt1];
+			state.c = letters[opt2];
+			state.d = letters[nextans];
+			state.answer = "d";
+			break;
+	}
+}
+
+function refreshScore() {
+	document.getElementById("score").innerHTML = state.correct + "/" + state.answered;
+}
+
+function refreshQuestion() {
+	document.getElementById("question").innerHTML = state.question;
+	document.getElementById("a").innerHTML = state.a;
+	document.getElementById("b").innerHTML = state.b;
+	document.getElementById("c").innerHTML = state.c;
+	document.getElementById("d").innerHTML = state.d;
+}
+
+function refreshPrevious() {
+	document.getElementById("previous").innerHTML = '<div><span class="' + state.prev_answer + '">' + state.prev_answer + '</span><span>' + state.pretty_answer + '</span><div>' + document.getElementById("previous").innerHTML;
+}
+
+function refreshSound() {
+	document.getElementById("sound").innerHTML = '<source src="' + state.sound + '" type="audio/ogg">';
+}
+
+function playSound() {
+	if (!state.sound) {
+		return;
+	}
+	var audio = new Audio(state.sound);
+	audio.load();
+	audio.play();
+}
+
+// guess: str a/b/c/d
+function updatePrevious(guess) {
+	state.prev_guess = guess;
+	if (guess == state.answer) {
+		state.prev_answer = "correct";
+	} else {
+		state.prev_answer = "wrong";
+	}
+}
+
+function updateScore(guess) {
+	state.answered++;
+	if (guess == state.answer) {
+		state.correct++;
+	}
+}
+
+function refreshAll() {
+	refreshScore();
+	refreshQuestion();
+}
+
+function submit(ctx) {
+	updateScore(ctx.id);
+	updatePrevious(ctx.id);
+	refreshPrevious();
+
+	nextQuestion();
+
+	refreshAll();
+}
+
+function main() {
+	init();
+	dumpAlphabet();
+}
+</script>
+<style>
+.option {
+	padding: 10px;
+	width: 100%;
+	color: white;
+}
+
+.option:hover {
+	background-color: yellow;
+	color: black;
+}
+
+.correct {
+	color: green;
+	padding-right: 20px;
+}
+
+.wrong {
+	color: red;
+	padding-right: 20px;
+}
+</style>
+</head>
+<body onLoad="main()">
+	<h1 id="question" onclick="playSound()">Question</h1>
+	<div id="a" class="option" onClick="submit(this)">a</div>
+	<div id="b" class="option" onClick="submit(this)">b</div>
+	<div id="c" class="option" onClick="submit(this)">c</div>
+	<div id="d" class="option" onClick="submit(this)">d</div>
+	<br><br><br>
+	<div>Score: <span id="score"></span></div>
+	<br>
+	<div id="previous"></div>
+</body>
+</html>
